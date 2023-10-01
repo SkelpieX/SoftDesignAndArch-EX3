@@ -75,7 +75,7 @@ class CashRegister {
     public void scan(String productID) {
         Product product = database.getProduct(productID);
         if (product != null) {
-            display.show("Product: " + product.getName() + ", Price: " + product.getPrice());
+            display.show("Product: " + product.getName() + ", Price: $" + product.getPrice());
         } else {
             display.show("Product not found.");
         }
